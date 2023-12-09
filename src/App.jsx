@@ -5,6 +5,14 @@ import Footer from './components/Footer'
 import jenna from './assets/jenna.png'
 import Tools from './components/Tools'
 
+/**
+ * TODOS
+ * - store theme in local storage
+ * - make site responsive
+ * - add projects
+ * - clean up code
+ */
+
 const languages = ['JavaScript', 'TypeScript', 'HTML', 'CSS/Sass', 'Java', 'C', 'Python']
 const tools = ['React.js', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'p5.js', 'Three.js', 'Git']
 const design = ['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD', 'Adobe After Effects', 'Sketch']

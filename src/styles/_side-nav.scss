@@ -5,8 +5,8 @@
     top: 0;
     left: 0;
     z-index: 1;
-    border-right: 1px solid var(--gray-200);
-    padding: 16px;
+    border-right: 1px solid var(--gray-100);
+    padding: 16px 24px;
     &__logo{
         margin-bottom: 0px;
     }
@@ -31,6 +31,10 @@
         &:hover{
             cursor: pointer;
             transform: scale(1.08);
+            background-color: var(--gray-200);
+        }
+        .theme-icon{
+            fill: var(--gray-400);
         }
     }
 }

@@ -10,7 +10,7 @@ function ProjectCard({num, image, title, description, chips, ghLink, projLink}) 
           <p className='project-card__num'>{`0${num+1}`}</p>
           <div>
             <h2 className='project-card__title'>{title}</h2>
-            <ArrowOutward className='project-card__arrow' fontSize='small' />
+            <ArrowOutward className='project-card__arrow' fontSize='small'/>
           </div>
           <p className='project-card__desc'>{description}</p>
         </div>

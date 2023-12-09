@@ -3,7 +3,7 @@
     color: black;
     @include flexRow(12px);
     padding: 8px;
-    border: 1px solid var(--gray-200);
+    border: 1px solid var(--gray-100);
     border-radius: 4px;
     margin-bottom: 8px;
     &:hover{

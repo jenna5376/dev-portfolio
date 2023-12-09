@@ -1,8 +1,11 @@
 .footer{
-    @include flexRow();
-    justify-content: space-between;
-    padding: 12px 32px;
+    @include flexRow(8px);
+    padding: 12px 48px;
     &__text{
         @include body-small;
+    }
+    &__dot{
+        @include body-x-small;
+        color: var(--primary);
     }
 }

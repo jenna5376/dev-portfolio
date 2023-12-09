@@ -48,7 +48,9 @@ function SideNav() {
             )
             })}
             <div className='side-nav__theme' onClick={() => setIsDark(!isDark)}>
-                {isDark ? <LightModeOutlined /> : <DarkModeOutlined/>}
+            {isDark ? 
+                <LightModeOutlined className='theme__icon' /> : 
+                <DarkModeOutlined className='theme-icon' />}
             </div>
         </nav>
     )
