@@ -1,0 +1,73 @@
+.project-cards{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.project-card{
+    display: flex;
+    gap: 24px;
+    text-decoration: none;
+    color: var(--black);
+    height: 160px;
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px  solid var(--gray-200);
+    &__img{
+        width: 320px;
+        background-color: var(--gray-200);
+        border-radius: 8px;
+    }
+    &__num{
+        @include section;
+        color: var(--primary);
+        margin-bottom: 4px
+    }
+    &__title{
+        @include h2;
+        margin-bottom: 8px;
+        display: inline-block;
+    }
+    &__desc{
+        @include body-regular
+    }
+    &__info{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 140px;
+        margin: auto 0;
+    }
+    &__chips{
+        display: flex;
+        flex-direction: row;
+    }
+    &__chip{
+        padding: 4px 8px;
+        border-radius: 4px;
+        background-color: var(--gray-100);
+        border: 1px solid var(--gray-200);
+        text-decoration: none;
+        margin-right: 8px;
+        @include flexRow(4px);
+    }
+    &__chip-label{
+        @include chip;
+    }
+    &__chip-icon{
+        color: var(--gray-300);
+    }
+    &__arrow{
+        margin-left: 4px;
+        margin-bottom: -4px;
+    }
+    &:hover{
+        transition: 0.1s ease-in-out;
+        background-color: var(--gray-100);
+        & .project-card__arrow{
+            transform: translateX(4px) translateY(-2px);
+            color: var(--primary);
+            transition: 0.1s ease-in;
+
+        }
+    }
+}

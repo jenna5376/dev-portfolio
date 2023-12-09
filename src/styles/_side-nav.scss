@@ -1,0 +1,36 @@
+.side-nav{
+    height: 100%;
+    width: 340px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-right: 1px solid var(--gray-200);
+    padding: 16px;
+    &__logo{
+        margin-bottom: 0px;
+    }
+    &__intro{
+        @include body-x-small;
+        margin-bottom: 16px;
+    }
+    &__section{
+        @include section-small;
+        margin-top: 20px;
+        margin-bottom: 8px;
+    }
+    &__theme{
+        width: 24px;
+        height: 24px;
+        padding: 12px;
+        position: fixed;
+        background-color: var(--gray-100);
+        border-radius: 100%;
+        bottom: 16px;
+        transition: all .2s ease-in-out;
+        &:hover{
+            cursor: pointer;
+            transform: scale(1.08);
+        }
+    }
+}
