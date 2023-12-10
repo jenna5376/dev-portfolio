@@ -3,12 +3,11 @@
     grid-template-columns: 1fr 1fr;
     gap: 48px 16px;
 }
+
 .project-card{
-    flex-basis: 20%;
     display: flex;
     flex-direction: column;
     gap: 12px;
-    flex-grow: 1;
     text-decoration: none;
     color: var(--black);
     border-radius: 12px;
@@ -41,19 +40,16 @@
         @include flexRow
     }
     &__chip{
+        @include flexRow(4px);
         padding: 4px 8px;
+        margin-right: 8px;
         border-radius: 4px;
         background-color: var(--gray-100);
         text-decoration: none;
-        margin-right: 8px;
-        @include flexRow(4px);
     }
     &__chip-label{
         @include chip;
         color: var(--gray-400);
-    }
-    &__chip-icon{
-        color: var(--gray-300);
     }
     &__arrow{
         margin-left: 4px;
@@ -61,12 +57,10 @@
     }
     &:hover{
         transition: 0.1s ease-in-out;
-        // background-color: var(--gray-100);
         & .project-card__arrow{
-            transform: translateX(4px) translateY(-2px);
             fill: var(--primary);
+            transform: translateX(4px) translateY(-2px);
             transition: 0.1s ease-in;
-
         }
         & .project-card__img{
             border-radius: 16px;

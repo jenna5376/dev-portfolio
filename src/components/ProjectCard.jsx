@@ -1,5 +1,5 @@
 import React from 'react'
-import { ArrowOutward, Code } from '@mui/icons-material';
+import { ArrowOutward } from '@mui/icons-material';
 
 function ProjectCard({num, image, title, description, chips, ghLink, projLink}) {
   return (
@@ -22,14 +22,6 @@ function ProjectCard({num, image, title, description, chips, ghLink, projLink}) 
               </div>
             )
           })}
-          {/* <a className='project-card__chip' href={ghLink}>
-            <ArrowOutward className='project-card__chip-icon' fontSize='small' />
-            <p className='project-card__chip-label'>GitHub</p>
-          </a>
-          <a className='project-card__chip' href={projLink}>
-            <Code className='project-card__chip-icon' fontSize='small' />
-            <p className='project-card__chip-label'>View Project</p>
-          </a> */}
         </div>
       </div>
     </a>

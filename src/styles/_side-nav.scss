@@ -1,12 +1,13 @@
 .side-nav{
     height: 100%;
     width: 340px;
+    padding: 16px 24px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
+    background-color: var(--white);
     border-right: 1px solid var(--gray-100);
-    padding: 16px 24px;
     &__logo{
         margin-bottom: 0px;
     }
@@ -23,17 +24,17 @@
         width: 24px;
         height: 24px;
         padding: 12px;
-        position: fixed;
-        background-color: var(--gray-100);
         border-radius: 100%;
+        position: fixed;
         bottom: 16px;
+        background-color: var(--gray-100);
         transition: all .2s ease-in-out;
         &:hover{
             cursor: pointer;
             transform: scale(1.08);
             background-color: var(--gray-200);
         }
-        .theme-icon{
+        .them__icon{
             fill: var(--gray-400);
         }
     }

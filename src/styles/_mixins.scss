@@ -1,10 +1,3 @@
-@mixin flexRow($gap: 0, $align: center) {
-    display: flex;
-    flex-direction: row;
-    align-items: $align;
-    gap: $gap;
-}
-
 @mixin h1{
     font-family: 'Source Code Pro', monospace;
     font-size: var(--h1);
@@ -16,11 +9,13 @@
     text-decoration-color: var(--primary);
     text-underline-offset: 6px;
 }
+
 @mixin h2{
     font-family: 'Source Code Pro', monospace;
     font-size: var(--h2);
     font-weight: 600;
 }
+
 @mixin section{
     font-family: 'Source Code Pro', monospace;
     font-size: var(--section);
@@ -29,6 +24,7 @@
     letter-spacing: 0.56px;
     text-transform: uppercase;
 }
+
 @mixin section-small{
     font-family: 'Source Code Pro', monospace;
     font-size: var(--section-small);
@@ -37,27 +33,38 @@
     letter-spacing: 0.56px;
     text-transform: uppercase;
 }
+
 @mixin chip{
     font-family: 'Poppins', sans-serif;
     font-size: var(--chip);
     font-weight: 400;
     color: var(--gray-300);
 }
+
 @mixin body-regular{
     font-family: 'Poppins', sans-serif;
     font-size: var(--body-regular);
     font-weight: 300;
     color: var(--gray-400);
 }
+
 @mixin body-small{
     font-family: 'Poppins', sans-serif;
     font-size: var(--body-small);
     font-weight: 300;
     color: var(--gray-400);
 }
+
 @mixin body-x-small{
     font-family: 'Poppins', sans-serif;
     font-size: var(--body-x-small);
     font-weight: 300;
     color: var(--gray-400);
+}
+
+@mixin flexRow($gap: 0, $align: center) {
+    display: flex;
+    flex-direction: row;
+    align-items: $align;
+    gap: $gap;
 }

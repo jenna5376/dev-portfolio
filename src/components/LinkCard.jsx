@@ -17,7 +17,7 @@ function LinkCard({image, title, description, link, external}) {
         >
             <img className='link-card__img' src={image} />
             <div>
-                <p className='link-card__title'>{title}</p>
+                <h5 className='link-card__title'>{title}</h5>
                 <p className='link-card__desc'>{description}</p>
             </div>
         </ConditionalWrapper>

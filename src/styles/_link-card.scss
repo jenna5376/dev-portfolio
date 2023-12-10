@@ -1,15 +1,11 @@
 .link-card{
-    text-decoration: none;
-    color: black;
     @include flexRow(12px);
     padding: 8px;
-    border: 1px solid var(--gray-100);
-    border-radius: 4px;
     margin-bottom: 8px;
-    &:hover{
-        transition: 0.1s ease-in-out;
-        background-color: var(--gray-100);
-    }
+    border-radius: 4px;
+    text-decoration: none;
+    color: black;
+    border: 1px solid var(--gray-100);
     &__img{
         border-radius: 4px;
     }
@@ -20,5 +16,9 @@
     &__desc{
         @include body-x-small;
         text-transform: lowercase;
+    }
+    &:hover{
+        transition: 0.1s ease-in-out;
+        background-color: var(--gray-100);
     }
 }

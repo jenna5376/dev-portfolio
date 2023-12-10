@@ -5,18 +5,10 @@ import Footer from './components/Footer'
 import jenna from './assets/jenna.png'
 import Tools from './components/Tools'
 
-/**
- * TODOS
- * - make site responsive
- * - add projects
- * - clean up code
- */
-
-const languages = ['JavaScript', 'TypeScript', 'HTML', 'CSS/Sass', 'Java', 'C', 'Python']
-const tools = ['React.js', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'p5.js', 'Three.js', 'Git']
-const design = ['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD', 'Adobe After Effects', 'Sketch']
-
 function App() {
+  const languages = ['JavaScript', 'TypeScript', 'HTML', 'CSS/Sass', 'Java', 'C', 'Python']
+  const tools = ['React.js', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'p5.js', 'Three.js', 'Git']
+  const design = ['Figma', 'Adobe Illustrator', 'Adobe Photoshop', 'Adobe XD', 'Adobe After Effects', 'Sketch']
 
   return (
     <div>
@@ -30,7 +22,7 @@ function App() {
                 <ProjectCard 
                   key={i}
                   num={i}
-                  image=''
+                  image={project.image}
                   title={project.title}
                   description={project.description}
                   chips={project.chips}
@@ -62,8 +54,8 @@ function App() {
           <h1 className='section__title'>About</h1>
           <div className='section--about'>
             <div>
-              <p className='section--about__title'>Hi, my name is Jenna!</p>
-              <p>I’m a developer based in New York City and I love creating things with design and code! I’m currently pursuing a bachelor’s degree in Interactive Media Arts and Computer Science at New York University. I aim to create intuitive designs that put the users’ needs first and bring them to life with code. When I’m not at my desk, I love to cook new recipes, paint to relax, and explore the city.</p>
+              <h5 className='section--about__title'>Hi, my name is Jenna!</h5>
+              <p>I'm a developer based in New York City and I love creating things with design and code! I'm currently pursuing a bachelor's degree in Interactive Media Arts and Computer Science at New York University. I aim to create intuitive designs that put the users' needs first and bring them to life with code. When I'm not at my desk, I love to cook new recipes, paint to relax, and explore the city.</p>
             </div>
             <img className='section--about__image' src={jenna}/>
           </div>
