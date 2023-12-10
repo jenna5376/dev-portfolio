@@ -5,7 +5,7 @@ import logo from '../assets/logo.svg'
 import logoDark from '../assets/logo-dark.svg'
 import links from '../data/links'
 import LinkCard from '../components/LinkCard'
-import { LightModeOutlined, DarkModeOutlined, Menu } from '@mui/icons-material';
+import { LightModeOutlined, DarkModeOutlined, Menu, Close } from '@mui/icons-material';
 
 function SideNav() {
     const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -37,25 +37,28 @@ function SideNav() {
                         <LightModeOutlined className='theme__icon' onClick={() => setIsDark(!isDark)} /> : 
                         <DarkModeOutlined className='theme__icon' onClick={() => setIsDark(!isDark)} />
                     }
-                    <Menu className='theme__icon' onClick={() => {setShowMenu(!showMenu)}} />
+                    {showMenu ?
+                        <Close className='theme__icon' onClick={() => {setShowMenu(!showMenu)}} /> :
+                        <Menu className='theme__icon' onClick={() => {setShowMenu(!showMenu)}} />
+                    }
                 </div>
             </div>
             <p className='side-nav__intro'>I'm Jenna, a multidisciplinary developer at NYU. I love creating user-centered designs and bringing them to life with code!</p>
-            <div 
-                className={`side-nav__links ${showMenu ? 'side-nav__links--display' : ''}`}
-            >
-                {links.slice(0, 2).map((link, i) => {
-                    return (
-                        <LinkCard 
-                            key={i}
-                            image={link.image}
-                            title={link.title}
-                            description={link.description}
-                            link={link.link}
-                            external={false}
-                        />
-                    )
-                })}
+            <div className={`side-nav__links ${showMenu ? 'side-nav__links--display' : ''}`}>
+                <div className='site-links'>
+                    {links.slice(0, 2).map((link, i) => {
+                        return (
+                            <LinkCard 
+                                key={i}
+                                image={link.image}
+                                title={link.title}
+                                description={link.description}
+                                link={link.link}
+                                external={false}
+                            />
+                        )
+                    })}
+                </div>
                 <p className='side-nav__section'>External Links</p>
                 {links.slice(3, 8).map((link, i) => {
                     return (

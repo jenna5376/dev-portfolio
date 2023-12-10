@@ -8,12 +8,19 @@
     z-index: 1;
     background-color: var(--white);
     border-right: 1px solid var(--gray-200);
+    @media screen and (max-width: 768px) {
+        position: static;
+        border: none;
+        height: min-content;
+        width: auto;
+        padding: 16px;
+    }
     &__top{
         margin-bottom: 8px;
         @include flexRow();
         @media screen and (max-width: 768px) {
             width: 100%;
-            padding: 12px 24px;
+            padding: 12px 16px;
             margin-bottom: 24px;
             box-sizing: border-box;
             position: fixed;
@@ -38,10 +45,13 @@
             display: none;
         }
         &--display{
+            .site-links{
+                display: none;
+            }
             @media screen and (max-width: 768px) {
                 display: block;
                 position: fixed;
-                top: 48px;
+                top: 24px;
                 left: 0;
                 padding: 24px;
                 box-sizing: border-box;
@@ -93,11 +103,5 @@
                 cursor: pointer;
             }
         }
-    }
-    @media screen and (max-width: 768px) {
-        position: static;
-        border: none;
-        height: min-content;
-        width: auto;
     }
 }
