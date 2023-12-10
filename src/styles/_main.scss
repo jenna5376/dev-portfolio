@@ -1,39 +1,45 @@
 .main{
-    margin-left: 388px;
+    margin-left: 368px;
 }
 
 .section{
-    padding: 32px 64px 48px 32px;
-    border-bottom: 1px solid var(--gray-100);
+    padding: 32px 24px 48px 24px;
+    border-bottom: 1px solid var(--gray-200);
     &__title{
         @include h1;
-        margin-bottom: 24px;
+        margin-bottom: 23px;
     }
     &--top{
-        padding-top: 16px
+        padding-top: 16px;
+        padding-bottom: 24px;
     }
     &--tools{
-        @include flexRow(160px, 'top');
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
         .tools{
             &__title{
                 @include section-small;
                 margin-bottom: 8px;
             }
+            &__ul{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 8px;
+            }
             &__li{
+                background-color: var(--gray-100);
                 list-style: none;
+                padding: 4px 8px;
+                border-radius: 4px;
+                white-space: nowrap;
                 @include body-regular;
             }
         }
-    }
-    &--about{
-        @include flexRow(48px);
-        &__image{
-            width: 32%;
-            border-radius: 4px;
-        }
-        &__title{
-            @include section;
-            margin-bottom: 8px;
+        @media screen and (max-width: 992px) {
+            gap: 24px;
+            flex-direction: column;
         }
     }
 }

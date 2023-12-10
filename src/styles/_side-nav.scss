@@ -1,41 +1,47 @@
 .side-nav{
     height: 100%;
-    width: 340px;
+    width: 320px;
     padding: 16px 24px;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1;
     background-color: var(--white);
-    border-right: 1px solid var(--gray-100);
+    border-right: 1px solid var(--gray-200);
     &__logo{
-        margin-bottom: 0px;
+        margin-bottom: 8px;
     }
     &__intro{
         @include body-x-small;
-        margin-bottom: 16px;
+        margin-bottom: 24px;
     }
     &__section{
         @include section-small;
-        margin-top: 20px;
+        margin-top: 24px;
         margin-bottom: 8px;
     }
     &__theme{
-        width: 24px;
-        height: 24px;
-        padding: 12px;
-        border-radius: 100%;
+        @include flexRow(4px);
         position: fixed;
-        bottom: 16px;
+        bottom: 24px;
         background-color: var(--gray-100);
+        padding: 4px 8px;
+        border-radius: 4px;
         transition: all .2s ease-in-out;
         &:hover{
             cursor: pointer;
             transform: scale(1.08);
             background-color: var(--gray-200);
         }
-        .them__icon{
+        .theme__icon{
             fill: var(--gray-400);
         }
+        .theme__text{
+            @include section-small;
+            color: var(--gray-400);
+        }
+    }
+    @media screen and (max-width: 992px) {
+        display: block;
     }
 }

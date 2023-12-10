@@ -29,8 +29,8 @@ function SideNav() {
     return (
         <nav className='side-nav'>
             <img className='side-nav__logo' src={isDark ? logoDark : logo}/>
-            <p className='side-nav__intro'>I'm a multidisciplinary developer at NYU. I love creating user-centered designs and bringing them to life with code!</p>
-            {links.slice(0, 3).map((link, i) => {
+            <p className='side-nav__intro'>I'm Jenna, a multidisciplinary developer at NYU. I love creating user-centered designs and bringing them to life with code!</p>
+            {links.slice(0, 2).map((link, i) => {
                 return (
                     <LinkCard 
                         key={i}
@@ -55,10 +55,15 @@ function SideNav() {
                     />
                 )
             })}
-            <div className='side-nav__theme' onClick={() => setIsDark(!isDark)}>
-            {isDark ? 
-                <LightModeOutlined className='theme__icon' /> : 
-                <DarkModeOutlined className='theme__icon' />}
+            <div className='side-nav__theme chip' onClick={() => setIsDark(!isDark)}>
+                {isDark ? 
+                    <LightModeOutlined className='theme__icon' fontSize='small' /> : 
+                    <DarkModeOutlined className='theme__icon' fontSize='small' />
+                }
+                {isDark ? 
+                    <p className='theme__text'>Light</p> :
+                    <p className='theme__text'>Dark</p>
+                }
             </div>
         </nav>
     )

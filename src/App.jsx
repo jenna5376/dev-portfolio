@@ -2,7 +2,6 @@ import projects from './data/projects'
 import ProjectCard from './components/ProjectCard'
 import SideNav from './components/SideNav'
 import Footer from './components/Footer'
-import jenna from './assets/jenna.png'
 import Tools from './components/Tools'
 
 function App() {
@@ -48,16 +47,6 @@ function App() {
               title="Design Tools"
               tools={design}
             />
-          </div>
-        </section>
-        <section id='about' className='section'>
-          <h1 className='section__title'>About</h1>
-          <div className='section--about'>
-            <div>
-              <h5 className='section--about__title'>Hi, my name is Jenna!</h5>
-              <p>I'm a developer based in New York City and I love creating things with design and code! I'm currently pursuing a bachelor's degree in Interactive Media Arts and Computer Science at New York University. I aim to create intuitive designs that put the users' needs first and bring them to life with code. When I'm not at my desk, I love to cook new recipes, paint to relax, and explore the city.</p>
-            </div>
-            <img className='section--about__image' src={jenna}/>
           </div>
         </section>
         <Footer />

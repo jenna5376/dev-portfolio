@@ -4,7 +4,7 @@ function Tools({title, tools}) {
   return (
     <div className='tools'>
         <h5 className='tools__title'>{title}</h5>
-        <ul>
+        <ul className='tools__ul'>
             {tools.map((tool, i) => {
                 return (
                   <>

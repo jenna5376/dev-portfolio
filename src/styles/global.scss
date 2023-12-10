@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Source+Code+Pro:ital,wght@0,600;1,600&display=swap');
 
 :root{
-    --h1: 1.125rem;
+    --h1: 1rem;
     --h2: 1.125rem;
     --section: 1rem;
     --section-small: 0.88rem;
@@ -18,7 +18,7 @@
     --body-x-small: 0.8125rem;
 
     --white: #f9f9f9;
-    --gray-100: #e5e3e3;
+    --gray-100: #efefef;
     --gray-200: #dddddd;
     --gray-300: #808080;
     --gray-400: #555555;
@@ -29,7 +29,7 @@
 .dark{
     --white: #131315;
     --gray-100: #2c2c2c;
-    --gray-200: #5b5b5b;
+    --gray-200: #464646;
     --gray-300: #bbbbbb;
     --gray-400: #cccccc;
     --black: #f8f8f8;

@@ -1,7 +1,10 @@
 .project-cards{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    border: 0.5px solid var(--gray-100);
+    border: 0.5px solid var(--gray-200);
+    @media screen and (max-width: 992px) {
+        display: block;
+    }
 }
 
 .project-card{
@@ -11,9 +14,9 @@
     text-decoration: none;
     color: var(--black);
     padding: 16px;
-    border: 0.5px solid var(--gray-100);
+    border: 0.5px solid var(--gray-200);
     &__img{
-        height: 200px;
+        height: 240px;
         background-color: var(--gray-200);
     }
     &__num{
