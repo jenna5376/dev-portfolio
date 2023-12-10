@@ -1,7 +1,7 @@
 .project-cards{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 48px 16px;
+    border: 0.5px solid var(--gray-100);
 }
 
 .project-card{
@@ -10,11 +10,11 @@
     gap: 12px;
     text-decoration: none;
     color: var(--black);
-    border-radius: 12px;
+    padding: 16px;
+    border: 0.5px solid var(--gray-100);
     &__img{
         height: 200px;
         background-color: var(--gray-200);
-        border-radius: 8px;
     }
     &__num{
         @include section;
@@ -64,7 +64,7 @@
         }
         & .project-card__img{
             border-radius: 16px;
-            transition: 0.1s ease-in;
+            transition: 0.08s ease-in;
         }
     }
 }

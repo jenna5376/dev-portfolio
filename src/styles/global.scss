@@ -59,7 +59,7 @@ p{
     border-bottom: 1px solid var(--gray-100);
     &__title{
         @include h1;
-        margin-bottom: 32px;
+        margin-bottom: 24px;
     }
     &--top{
         padding-top: 16px
@@ -80,8 +80,8 @@ p{
     &--about{
         @include flexRow(48px);
         &__image{
-            width: 40%;
-            border-radius: 8px;
+            width: 32%;
+            border-radius: 4px;
         }
         &__title{
             @include section;

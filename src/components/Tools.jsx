@@ -7,7 +7,9 @@ function Tools({title, tools}) {
         <ul>
             {tools.map((tool, i) => {
                 return (
+                  <>
                     <li key={i} className='tools__li'>{tool}</li>
+                  </>
                 )
             })}
         </ul>

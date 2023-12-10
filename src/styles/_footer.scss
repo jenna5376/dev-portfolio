@@ -1,6 +1,6 @@
 .footer{
     @include flexRow(8px);
-    padding: 16px 32px;
+    padding: 12px 32px;
     &__text{
         @include body-small;
     }
