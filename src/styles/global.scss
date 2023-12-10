@@ -11,13 +11,13 @@
     --h2: 1.25rem;
     --section: 1rem;
     --section-small: 0.88rem;
-    --chip: 0.8125rem;
+    --chip: 0.75rem;
     --body-regular: 1rem;
     --body-small: 0.88rem;
     --body-x-small: 0.8125rem;
 
     --white: #f9f9f9;
-    --gray-100: #e6e6e6;
+    --gray-100: #e5e3e3;
     --gray-200: #dddddd;
     --gray-300: #808080;
     --gray-400: #555555;
@@ -52,7 +52,7 @@ p{
 .main{
     margin-left: 388px;
     .section{
-        padding: 32px 120px 48px 48px;
+        padding: 32px 64px 48px 32px;
         border-bottom: 1px solid var(--gray-100);
         &__title{
             @include h1;
@@ -78,7 +78,7 @@ p{
     .section--about{
         @include flexRow(48px);
         &__image{
-            width: 320px;
+            width: 40%;
             border-radius: 8px;
         }
         &__title{

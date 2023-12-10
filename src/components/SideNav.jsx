@@ -9,11 +9,19 @@ import { useState, useEffect } from 'react'
 
 function SideNav() {
     const getCurrentTheme = () => window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const [isDark, setIsDark] = useState(getCurrentTheme());
+    const [isDark, setIsDark] = useState(() => {
+        const initialTheme = localStorage.getItem('theme')
+        if (initialTheme){
+            const theme = initialTheme === 'dark' ? true : false
+            return theme
+        }
+        return getCurrentTheme()
+    })
     const addBodyClass = className => document.body.classList.add(className);
     const removeBodyClass = className => document.body.classList.remove(className);
 
     useEffect(() => {
+        localStorage.setItem('theme', isDark ? 'dark' : 'light')
         if (isDark) addBodyClass('dark')
         else removeBodyClass('dark')
     }, [isDark])
