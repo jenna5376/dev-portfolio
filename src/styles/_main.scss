@@ -1,0 +1,39 @@
+.main{
+    margin-left: 388px;
+}
+
+.section{
+    padding: 32px 64px 48px 32px;
+    border-bottom: 1px solid var(--gray-100);
+    &__title{
+        @include h1;
+        margin-bottom: 24px;
+    }
+    &--top{
+        padding-top: 16px
+    }
+    &--tools{
+        @include flexRow(160px, 'top');
+        .tools{
+            &__title{
+                @include section-small;
+                margin-bottom: 8px;
+            }
+            &__li{
+                list-style: none;
+                @include body-regular;
+            }
+        }
+    }
+    &--about{
+        @include flexRow(48px);
+        &__image{
+            width: 32%;
+            border-radius: 4px;
+        }
+        &__title{
+            @include section;
+            margin-bottom: 8px;
+        }
+    }
+}

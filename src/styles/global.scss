@@ -3,12 +3,13 @@
 @import './project-card';
 @import './side-nav';
 @import './footer';
+@import './main';
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&family=Source+Code+Pro:ital,wght@0,600;1,600&display=swap');
 
 :root{
     --h1: 1.125rem;
-    --h2: 1.25rem;
+    --h2: 1.125rem;
     --section: 1rem;
     --section-small: 0.88rem;
     --chip: 0.75rem;
@@ -48,44 +49,4 @@ body{
 
 p{
     @include body-regular
-}
-
-.main{
-    margin-left: 388px;
-}
-
-.section{
-    padding: 32px 64px 48px 32px;
-    border-bottom: 1px solid var(--gray-100);
-    &__title{
-        @include h1;
-        margin-bottom: 24px;
-    }
-    &--top{
-        padding-top: 16px
-    }
-    &--tools{
-        @include flexRow(160px, 'top');
-        .tools{
-            &__title{
-                @include section;
-                margin-bottom: 8px;
-            }
-            &__li{
-                list-style: none;
-                @include body-regular;
-            }
-        }
-    }
-    &--about{
-        @include flexRow(48px);
-        &__image{
-            width: 32%;
-            border-radius: 4px;
-        }
-        &__title{
-            @include section;
-            margin-bottom: 8px;
-        }
-    }
 }
